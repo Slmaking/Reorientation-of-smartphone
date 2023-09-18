@@ -17,6 +17,31 @@ Detecting the orientation of smartphones poses a challenge in various domains, p
 To obtain these orientation angles, the function applies the rotations in the order of azimuth, pitch, and roll to transform an identity matrix into the given rotation matrix. All these angles are expressed in radians.
 
 
+When working with orientation sensors on a mobile device, it's often necessary to compute two important matrices: the inclination matrix (I) and the rotation matrix (R). These matrices are essential for transforming a vector from the device's coordinate system to the world's coordinate system, which is defined by specific rules:
+To compute the inclination matrix (I) and the rotation matrix (R) for transforming a vector from the device's coordinate system to the world's coordinate system, we follow a specific set of rules:
 
+1. **World's Coordinate System Definition:**
+   - X-axis: The vector product of Y and Z (tangential to the ground and roughly East).
+   - Y-axis: Tangential to the ground and pointing towards the magnetic North Pole.
+   - Z-axis: Points towards the sky and is perpendicular to the ground.
+
+2. **By Definition:**
+   - [0 0 g] = R * gravity (where g is the magnitude of gravity).
+   - [0 m 0] = I * R * geomagnetic (where m is the magnitude of the geomagnetic field).
+   - R is an identity matrix when the device aligns with the world's coordinate system.
+   - I is a rotation matrix that aligns the geomagnetic vector with gravity (world's coordinate system), involving a rotation around the X-axis.
+
+3. **Matrix Formats:**
+   - Matrices are returned in either 3x3 or 4x4 row-major format, depending on the array length.
+   - If the array length is 16, the matrix format is suitable for OpenGL ES.
+   - If the array length is 9, a more compact format is provided.
+   - The inverse of each matrix can be obtained by taking its transpose.
+
+4. **Usage Notes:**
+   - These matrices are accurate when the device is not in free fall or near strong magnetic interference.
+   - Free fall is defined as when gravity's magnitude is less than 1/10 of its nominal value.
+
+In summary, you can use this function to calculate rotation (R) and inclination (I) matrices to transform vectors from the device's coordinate system to the world's coordinate system. These matrices are crucial for orientation-related applications, such as augmented reality or navigation, but their accuracy may be compromised if the device is in free fall or exposed to strong magnetic fields.
+![image](https://github.com/Slmaking/Reorientation-of-smartphone/assets/58626257/c56fec0b-a17d-4af6-b038-91b249a8db19)
 
 
