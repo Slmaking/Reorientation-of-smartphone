@@ -1,10 +1,14 @@
 # Reorientation-of-smartphone
 
 ---
+<p align="justify">
 
 The utilization of accelerometer data plays a crucial role in Intelligent Transportation Systems (ITS) applications as it facilitates the detection of traffic-related incidents. By analyzing accelerometer readings, it becomes possible to ascertain various aspects such as the vehicle's direction, orientation, harsh brake, crashes, or encounters with road irregularities. However, the processing of acceleration data can be challenging, particularly in uncontrolled application scenarios, such as when collecting data in the background using a mobile phone while the user engages in everyday activities. In controlled scenarios, the smartphone's axes align with the vehicle's movement. Nevertheless, this alignment is not always applicable during regular smartphone usage, causing a mismatch between the axes and the frames of reference that accurately represent the user's experiences. In such cases, it becomes necessary to perform a series of rotations on the accelerometer's Cartesian axes to align them with a specific frame of reference. For example, if the smartphone is placed horizontally within a vehicle, and the goal is to capture events related to road irregularities from the shock absorbers, a reorientation of the accelerometer samples can be applied. This reorientation ensures that the readings are correctly displayed along the Z-axis instead of the X-axis. Overall, the processing and reorientation of accelerometer data are essential for ITS applications, enabling the identification and analysis of various traffic events while considering the specific frame of reference in a given scenario.
 
 Detecting the orientation of smartphones poses a challenge in various domains, particularly when employing crowd-sensing or unsupervised experiments. The methods and strategies presented in existing literature exhibit variations based on the specific requirements and objectives of the experiment. Certain scenarios demand precise and absolute orientation information, while in other cases, identifying an orientation category is deemed satisfactory. Moreover, some approaches focus on orienting the smartphone in a specific situation and subsequently deducing different situations based on changes in orientation.
+
+</p>
+
 
 # Algorithm 
 
@@ -16,9 +20,11 @@ Detecting the orientation of smartphones poses a challenge in various domains, p
 
 To obtain these orientation angles, the function applies the rotations in the order of azimuth, pitch, and roll to transform an identity matrix into the given rotation matrix. All these angles are expressed in radians.
 
+# Rotation Matrix
 
 When working with orientation sensors on a mobile device, it's often necessary to compute two important matrices: the inclination matrix (I) and the rotation matrix (R). These matrices are essential for transforming a vector from the device's coordinate system to the world's coordinate system, which is defined by specific rules:
 To compute the inclination matrix (I) and the rotation matrix (R) for transforming a vector from the device's coordinate system to the world's coordinate system, we follow a specific set of rules:
+
 
 1. **World's Coordinate System Definition:**
 
