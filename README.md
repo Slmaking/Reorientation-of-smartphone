@@ -6,6 +6,10 @@ The utilization of accelerometer data plays a crucial role in Intelligent Transp
 
 Detecting the orientation of smartphones poses a challenge in various domains, particularly when employing crowd-sensing or unsupervised experiments. The methods and strategies presented in existing literature exhibit variations based on the specific requirements and objectives of the experiment. Certain scenarios demand precise and absolute orientation information, while in other cases, identifying an orientation category is deemed satisfactory. Moreover, some approaches focus on orienting the smartphone in a specific situation and subsequently deducing different situations based on changes in orientation.
 
+# Data Describtion
+
+<p align="justify">
+In this project, I'm using data recorded from my personal iOS smartphone to see if I can make the phone adjust its orientation. The recording lasts for 685 seconds. I made sure to position my phone in the cup holder to minimize any unnecessary noise during recording. This also ensured that the phone stayed at a consistent angle with the car, which is important for our analysis. To get a comprehensive view of the phone's movement, I'm using various sensors available on iOS devices. These sensors include the Global Positioning System (GPS), gyroscope, accelerometer, and magnetometer. Each of these sensors provides different information about how the phone is oriented and moving, helping us build a better algorithm for reorientation. By using all these sensors, my main goal is to create an algorithm that can use azimuth and heading data to adjust the phone's orientation in real-time. This ability could have applications in navigation systems and augmented reality experiences. In this project, I'll carefully analyze and process the sensor data, refine the algorithm, and then test how well it works in reorienting the phone. This project has the potential to improve user experiences in mobile applications and beyond.
 
 # Algorithm 
 
