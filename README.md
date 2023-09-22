@@ -30,6 +30,8 @@ To compute the inclination matrix (I) and the rotation matrix (R) for transformi
 
 1. **World's Coordinate System Definition:**
 
+This function computes the orientation of a device based on a given rotation matrix. It provides three values to describe the device's orientation: To obtain these orientation angles, the function applies the rotations in the order of azimuth, pitch, and roll to transform an identity matrix into the given rotation matrix. All these angles are expressed in radians. To use this function, you need to input a rotation matrix obtained from a method like `getRotationMatrix`.
+When working with orientation sensors on a mobile device, it's often necessary to compute two important matrices: the inclination matrix (I) and the rotation matrix (R). These matrices are essential for transforming a vector from the device's coordinate system to the world's coordinate system, which is defined by specific rules: To compute the inclination matrix (I) and the rotation matrix (R) for transforming a vector from the device's coordinate system to the world's coordinate system, we follow a specific set of rules:
    
    - X-axis: The vector product of Y and Z (tangential to the ground and roughly East).
    - Y-axis: Tangential to the ground and pointing towards the magnetic North Pole.
@@ -55,7 +57,18 @@ To compute the inclination matrix (I) and the rotation matrix (R) for transformi
    - These matrices are accurate when the device is not in free fall or near strong magnetic interference.
    - Free fall is defined as when gravity's magnitude is less than 1/10 of its nominal value.
 
-In summary, you can use this function to calculate rotation (R) and inclination (I) matrices to transform vectors from the device's coordinate system to the world's coordinate system. These matrices are crucial for orientation-related applications, such as augmented reality or navigation, but their accuracy may be compromised if the device is in free fall or exposed to strong magnetic fields.
+
+
+
+
+
+5- **Reference:**
+
+1.	Sysel, Martin. (2016). An Implementation of a Tilt-Compensated eCompass. 10.1007/978-3-319-33389-2_4.
+2.	Promwongsa, N., Chaisatsilp, P., Supakwong, S.: Automatic accelerometer reori- entation for driving event detection using smartphone. In: 13th ITS Asia Pacific Forum, Auckland, New Zealand (2014) 
+3.	Carlos, M.R., González, L.C., Martínez, F., Cornejo, R. (2016). Evaluating Reorientation Strategies for Accelerometer Data from Smartphones for ITS Applications. In: García, C., Caballero-Gil, P., Burmester, M., Quesada-Arencibia, A. (eds) Ubiquitous Computing and Ambient Intelligence. IWAAL AmIHEALTH UCAmI 2016 2016 2016. Lecture Notes in Computer Science(), vol 10070. Springer, Cham. https://doi.org/10.1007/978-3-319-48799-1_45
+![image](https://github.com/Slmaking/Reorientation-of-smartphone/assets/58626257/5083ca12-a931-45a6-8189-3bb3092bdd3f)
+
 </p>
 
 
