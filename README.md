@@ -57,11 +57,6 @@ When working with orientation sensors on a mobile device, it's often necessary t
    - These matrices are accurate when the device is not in free fall or near strong magnetic interference.
    - Free fall is defined as when gravity's magnitude is less than 1/10 of its nominal value.
 
-
-
-
-
-
 5- **Reference:**
 
 1.	Sysel, Martin. (2016). An Implementation of a Tilt-Compensated eCompass. 10.1007/978-3-319-33389-2_4.
