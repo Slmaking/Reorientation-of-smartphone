@@ -62,7 +62,6 @@ When working with orientation sensors on a mobile device, it's often necessary t
 1.	Sysel, Martin. (2016). An Implementation of a Tilt-Compensated eCompass. 10.1007/978-3-319-33389-2_4.
 2.	Promwongsa, N., Chaisatsilp, P., Supakwong, S.: Automatic accelerometer reori- entation for driving event detection using smartphone. In: 13th ITS Asia Pacific Forum, Auckland, New Zealand (2014) 
 3.	Carlos, M.R., González, L.C., Martínez, F., Cornejo, R. (2016). Evaluating Reorientation Strategies for Accelerometer Data from Smartphones for ITS Applications. In: García, C., Caballero-Gil, P., Burmester, M., Quesada-Arencibia, A. (eds) Ubiquitous Computing and Ambient Intelligence. IWAAL AmIHEALTH UCAmI 2016 2016 2016. Lecture Notes in Computer Science(), vol 10070. Springer, Cham. https://doi.org/10.1007/978-3-319-48799-1_45
-![image](https://github.com/Slmaking/Reorientation-of-smartphone/assets/58626257/5083ca12-a931-45a6-8189-3bb3092bdd3f)
 
 </p>
 
